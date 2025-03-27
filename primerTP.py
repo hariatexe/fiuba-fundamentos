@@ -60,10 +60,10 @@ def obtener_mcm(num1,num2,num3,num4):
 
 
 
-num1 = 54 # Calcular mcm
+num1 = 60 # Calcular mcm
 num2 = 54 # Calcular mcm
 num3 = 10 # Extremo de Intervalo
-num4 = 120 # Extremo de Intervalo
+num4 = 600 # Extremo de Intervalo
 
 x = obtener_mcm(num1,num2,num3,num4)
 print("El mcm entre los números",num1, "y", num2, "es:", x, ",respetando el intervalo: (", num3,">=x<=",num4, ")")
