@@ -4,13 +4,13 @@ def calcular_total_ventas(ventas):
 def sucursal_con_menos_ventas(ventas):
     totales = [sum(sucursal) for sucursal in ventas]
     menor = min(totales)
-    indice = totales.index(menor) # con .index en este caso obtiene la posicion del menor valor
+    indice = totales.index(menor) # con .index en este caso obtenemos la posicion del menor valor
     return indice + 1, menor # Suma uno, para obtener el numero de sucursal
 
 def dia_con_mas_ventas(ventas):
     dias = list(zip(*ventas))  # Transpone la matriz para obtener las ventas del dia
     suma_por_dia = [sum(dia) for dia in dias]
-    maximo = max(suma_por_dia)
+    maximo = max(suma_por_dia) # La máxima cantidad de ventas
     indice = suma_por_dia.index(maximo)
     dias_semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
     return dias_semana[indice], maximo
@@ -26,8 +26,8 @@ def main():
     sucursal, ventas_min = sucursal_con_menos_ventas(ventas)
     dia, monto_max = dia_con_mas_ventas(ventas)
 
-    print("El total de ventas en la semana fue:", total)
-    print(f"La sucursal {sucursal} tuvo menos ventas, VENTAS: {ventas_min}")
-    print(f"El día con más ventas fue {dia} con un total de {monto_max}")
+    print("Total de ventas en la semana fue:", total)
+    print(f"La sucursal {sucursal} tuvo menos ventas durante la semana, VENTAS: {ventas_min}")
+    print(f"El día con más ventas fue el {dia} con un total de {monto_max}")
 
 main()
