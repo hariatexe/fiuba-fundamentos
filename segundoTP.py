@@ -1,3 +1,4 @@
+# Lautaro Ignacio Arias 
 def calcular_total_ventas(ventas):
     return sum(sum(sucursal) for sucursal in ventas)
 
