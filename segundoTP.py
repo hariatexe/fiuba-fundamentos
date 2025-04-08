@@ -4,7 +4,7 @@ def calcular_total_ventas(ventas):
 def sucursal_con_menos_ventas(ventas):
     totales = [sum(sucursal) for sucursal in ventas]
     menor = min(totales)
-    indice = totales.index(menor) # Obtiene la posicion del menor valor
+    indice = totales.index(menor) # con .index en este caso obtiene la posicion del menor valor
     return indice + 1, menor # Suma uno, para obtener el numero de sucursal
 
 def dia_con_mas_ventas(ventas):
