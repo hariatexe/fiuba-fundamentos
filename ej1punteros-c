@@ -1,0 +1,46 @@
+#include <stdio.h>
+#define MF 3
+
+typedef float t_vector[MF]; 
+
+
+int cargar(t_vector v, int mf){
+    float num; 
+    int i = 0; 
+    
+    printf("Ingrese valor (0 para finalizar): "); 
+    scanf("%f",&num); 
+    
+    while ((num != 0) && (i < mf)){
+        v[i] = num;
+        i++; 
+        if(i < mf){
+            printf("Ingrese valor (0 para finalizar): "); 
+            scanf("%f",&num); 
+        }
+    }   
+    return i; 
+    
+}
+
+void mostrar(t_vector vec, int ml){
+    int i; 
+    printf("La cantidad de elementos es: %d \n", ml); 
+    // tambien puede ser <= ml - 1
+    for(i=0; i < ml; i++){
+        printf("v[%d] = %.2f\n", i, vec[i]); 
+    }
+}
+
+int main()
+{
+   int ml; 
+   t_vector vec; 
+   
+   //No requiere referencia 
+   ml = cargar(vec, MF);
+   //ml (Maximo logico) -> Hasta donde mostrar 
+   mostrar(vec, ml); 
+   
+   
+}
